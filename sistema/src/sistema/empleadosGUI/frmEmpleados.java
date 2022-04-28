@@ -23,7 +23,7 @@ public class frmEmpleados extends javax.swing.JFrame {
     public frmEmpleados() {
         initComponents();
         
-        String[] titulos= {"ID","Nombre","Correo"};
+        String[] titulos= {"ID","Nombre","Correo","Sexo","Departamento"};
         modelo = new DefaultTableModel(null,titulos);
         tblEmpleados.setModel(modelo);
         
@@ -53,6 +53,10 @@ public class frmEmpleados extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtSexo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtdepartamento = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -116,17 +120,28 @@ public class frmEmpleados extends javax.swing.JFrame {
 
         jLabel4.setText("EMPLEADOS");
 
+        jLabel5.setText("Sexo");
+
+        jLabel6.setText("Departamento al que pertenece");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(txtCorreo)
                         .addGap(46, 46, 46))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -134,7 +149,7 @@ public class frmEmpleados extends javax.swing.JFrame {
                                 .addComponent(btnAgregar)
                                 .addGap(27, 27, 27)
                                 .addComponent(btnEditar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnBorrar)
                                 .addGap(27, 27, 27)
                                 .addComponent(btnCancelar))
@@ -144,29 +159,41 @@ public class frmEmpleados extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addComponent(jLabel3)
                                 .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(13, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(207, 207, 207)
-                .addComponent(jLabel4)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap(13, Short.MAX_VALUE))
+                    .addComponent(txtNombre)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(txtdepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(9, 9, 9)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(3, 3, 3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(3, 3, 3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtdepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnEditar)
@@ -186,8 +213,8 @@ public class frmEmpleados extends javax.swing.JFrame {
         
         empleadosBL oEmpleados= recuperarDatosGUI();
         
-        String strSentenciaInsert= String.format("INSERT INTO Empleados (ID, Nombre, Correo)"
-                + "VALUES (null, '%s','%s')", oEmpleados.getNombre(), oEmpleados.getCorreo());
+        String strSentenciaInsert= String.format("INSERT INTO Empleados (ID, Nombre, Correo, Sexo, Departamento)"
+                + "VALUES (null, '%s','%s','%s','%s')", oEmpleados.getNombre(), oEmpleados.getCorreo(), oEmpleados.getSexo(), oEmpleados.getDepartamento());
         
         objConexion.ejecutarSentenciaSQL(strSentenciaInsert);
       
@@ -205,6 +232,8 @@ public class frmEmpleados extends javax.swing.JFrame {
             txtID.setText(receptor.getModel().getValueAt(receptor.getSelectedRow(), 0).toString());
             txtNombre.setText(receptor.getModel().getValueAt(receptor.getSelectedRow(), 1).toString());
             txtCorreo.setText(receptor.getModel().getValueAt(receptor.getSelectedRow(), 2).toString());
+            txtSexo.setText(receptor.getModel().getValueAt(receptor.getSelectedRow(), 3).toString());
+            txtdepartamento.setText(receptor.getModel().getValueAt(receptor.getSelectedRow(), 4).toString());
         }
         btnAgregar.setEnabled(false);
         btnEditar.setEnabled(true);
@@ -230,7 +259,7 @@ public class frmEmpleados extends javax.swing.JFrame {
         empleadosBL oEmpleados= recuperarDatosGUI();
         
         String strSentenciaEdit= String.format("UPDATE Empleados SET Nombre='%s',"
-                + "Correo='%s' WHERE ID = %d", oEmpleados.getNombre(), oEmpleados.getCorreo(), oEmpleados.getID());
+                + "Correo='%s',Sexo='%s',Departamento='%s' WHERE ID = %d", oEmpleados.getNombre(), oEmpleados.getCorreo(), oEmpleados.getSexo(),oEmpleados.getID(),oEmpleados.getDepartamento());
         
         objConexion.ejecutarSentenciaSQL(strSentenciaEdit);
         
@@ -258,8 +287,10 @@ public class frmEmpleados extends javax.swing.JFrame {
                 System.out.println(resultado.getString("ID"));
                 System.out.println(resultado.getString("Nombre"));
                 System.out.println(resultado.getString("Correo"));
+                System.out.println(resultado.getString("Sexo"));
+                System.out.println(resultado.getString("Departamento"));
                 
-                Object[] oUsuario={resultado.getString("ID"),resultado.getString("Nombre"),resultado.getString("Correo")};
+                Object[] oUsuario={resultado.getString("ID"),resultado.getString("Nombre"),resultado.getString("Correo"), resultado.getString("Sexo"), resultado.getString("Departamento")};
                 
                 modelo.addRow(oUsuario);
             }
@@ -278,7 +309,8 @@ public class frmEmpleados extends javax.swing.JFrame {
         oEmpleados.setID(ID);
         oEmpleados.setNombre(txtNombre.getText());
         oEmpleados.setCorreo(txtCorreo.getText());
-        
+        oEmpleados.setSexo(txtSexo.getText());
+        oEmpleados.setDepartamento(txtdepartamento.getText());
         return oEmpleados;
     }
     /*funcion limpiar*/
@@ -287,6 +319,8 @@ public class frmEmpleados extends javax.swing.JFrame {
     txtID.setText("");
     txtNombre.setText("");
     txtCorreo.setText("");
+    txtSexo.setText("");
+    txtdepartamento.setText("");
     
     btnAgregar.setEnabled(true);
     btnEditar.setEnabled(false);
@@ -320,10 +354,8 @@ public class frmEmpleados extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frmEmpleados().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new frmEmpleados().setVisible(true);
         });
     }
 
@@ -336,10 +368,14 @@ public class frmEmpleados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblEmpleados;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtSexo;
+    private javax.swing.JTextField txtdepartamento;
     // End of variables declaration//GEN-END:variables
 }

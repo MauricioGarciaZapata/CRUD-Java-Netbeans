@@ -11,7 +11,23 @@ package sistema.empleadosBL;
 public class empleadosBL {
     
     int ID;
-    String nombre, correo;
+    String nombre, correo, sexo, departamento;
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 
     public int getID() {
         return ID;
