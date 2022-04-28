@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  * @author Daniel
  */
 public class conexion {
-    String strConexionBD = "jdbc:sqlite:C:/Users/usuario/OneDrive/Documentos/NetBeansProjects/CRUD-Java-Netbeans/sistema/sistema.s3db";
+    String strConexionBD = "jdbc:sqlite:C:/Users/usuario/OneDrive/Documentos/NetBeansProjects/CRUD-Java-Modificado/sistema/sistema.s3db";
     Connection conn = null;
     
 /**
